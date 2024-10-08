@@ -51,7 +51,7 @@ public class SpringBootVFS extends DefaultVFS {
      */
     @Override
     protected boolean isJar( final URL url ) {
-        return url.getPath().toLowerCase().endsWith( ResourceUtils.JAR_FILE_EXTENSION ) || url.getPath().toLowerCase().endsWith( ".war" );
+        return url.getPath().toLowerCase().contains( ResourceUtils.JAR_FILE_EXTENSION ) || url.getPath().toLowerCase().endsWith( ".war" );
     }
 
     /**
